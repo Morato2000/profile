@@ -8,7 +8,7 @@ createRoot(document.getElementById('root')).render(
     <App />
   </StrictMode>,
 )
-}*/
+}
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
@@ -20,4 +20,17 @@ ReactDOM.createRoot(root).render(
   <BrowserRouter>
     <App />
   </BrowserRouter>
+);
+*/
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { HashRouter } from "react-router-dom"; // Import HashRouter
+import App from "./App.jsx";
+
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <React.StrictMode>
+    <HashRouter> {/* Use HashRouter instead of BrowserRouter */}
+      <App />
+    </HashRouter>
+  </React.StrictMode>
 );
